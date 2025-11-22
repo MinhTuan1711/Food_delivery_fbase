@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_fbase/services/cart_service.dart';
+import 'package:food_delivery_fbase/services/business/cart_service.dart';
 import 'package:food_delivery_fbase/models/cart_item.dart';
 
 class CartBadge extends StatefulWidget {

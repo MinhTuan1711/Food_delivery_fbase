@@ -1,0 +1,160 @@
+@startuml Food Delivery System - Package Diagram
+
+!define RECTANGLE class
+
+package "Food Delivery App" {
+    
+    package models <<Rectangle>> {
+        [Food]
+        [Order]
+        [User]
+        [Restaurant]
+        [CartItem]
+    }
+    
+    package services <<Rectangle>> {
+        [CartService]
+        [FoodService]
+        [OrderService]
+        [UserService]
+        [StatisticsService]
+        [PaymentSimulationService]
+        [StripeService]
+        [ImageService]
+        [LocationService]
+        [LocationCheckService]
+        [DeliveryRangeService]
+        [FavoriteService]
+        [NotificationService]
+        [FCMService]
+        
+        package "services.auth" <<Rectangle>> {
+            [AuthService]
+            [AuthGate]
+            [LoginOrRegister]
+        }
+    }
+    
+    package pages <<Rectangle>> {
+        [HomePage]
+        [FoodPage]
+        [CartPage]
+        [LoginPage]
+        [RegisterPage]
+        [ProfilePage]
+        [MyOrdersPage]
+        [OrderDetailPage]
+        [OrderTrackingPage]
+        [PaymentPage]
+        [ThankYouPage]
+        [FavoritesPage]
+        [SettingsPage]
+        [NotificationsPage]
+        [DeliveryInfoPage]
+        [LocationSelectionPage]
+        [AdminPage]
+        [AdminDashboardPage]
+        [AdminProductManagementPage]
+        [AdminAddFoodPage]
+        [AdminEditFoodPage]
+        [AdminOrderManagementPage]
+        [AdminUserManagementPage]
+        [AdminStatisticsPage]
+        [AdminSetupPage]
+        [MigrationPage]
+    }
+    
+    package components <<Rectangle>> {
+        [MyButton]
+        [MyTextField]
+        [MyFoodTile]
+        [MyCartTile]
+        [MyDrawer]
+        [MyDrawerTile]
+        [MySliverAppBar]
+        [MyTabBar]
+        [MyDescriptionBox]
+        [MyQuantitySelector]
+        [MyCurrentLocation]
+        [CartBadge]
+        [AuthWidgets]
+        [UserInfoWidget]
+    }
+    
+    package widgets <<Rectangle>> {
+        [DeliveryRangeDialog]
+    }
+    
+    package themes <<Rectangle>> {
+        [ThemeProvider]
+        [LightMode]
+        [DarkMode]
+    }
+    
+    package utils <<Rectangle>> {
+        [CurrencyFormatter]
+        [AdminChecker]
+        [AdminSetup]
+        [AuthHelpers]
+        [DataMigration]
+        [ImagePlaceholders]
+        [SetupRestaurantConfig]
+    }
+    
+    [main.dart]
+    [firebase_options.dart]
+}
+
+' Dependencies
+pages --> components : uses
+pages --> models : uses
+pages --> services : uses
+pages --> widgets : uses
+pages --> themes : uses
+pages --> utils : uses
+
+components --> models : uses
+components --> services : uses
+
+services --> models : uses
+services.auth --> models : uses
+
+widgets --> models : uses
+widgets --> services : uses
+
+utils --> models : uses
+utils --> services : uses
+
+[main.dart] --> services
+[main.dart] --> models
+[main.dart] --> themes
+[main.dart] --> [firebase_options.dart]
+
+' External dependencies
+cloud package "Firebase" {
+    [FirebaseAuth]
+    [CloudFirestore]
+    [FirebaseStorage]
+    [FirebaseMessaging]
+}
+
+cloud package "Flutter" {
+    [Material]
+    [Provider]
+}
+
+cloud package "External Services" {
+    [Stripe]
+    [GoogleSignIn]
+    [Geolocator]
+    [ImagePicker]
+}
+
+services --> Firebase : uses
+services --> "External Services" : uses
+pages --> Flutter : uses
+components --> Flutter : uses
+
+@enduml
+
+

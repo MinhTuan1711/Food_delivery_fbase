@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_fbase/services/user_service.dart';
-import 'package:food_delivery_fbase/pages/location_selection_page.dart';
+import 'package:food_delivery_fbase/services/business/user_service.dart';
+import 'package:food_delivery_fbase/pages/user/location_selection_page.dart';
 
 class MyCurrentLocation extends StatelessWidget {
   MyCurrentLocation({super.key});

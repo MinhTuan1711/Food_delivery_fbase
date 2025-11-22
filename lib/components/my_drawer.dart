@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_fbase/components/my_drawer_tile.dart';
-import 'package:food_delivery_fbase/pages/settings_page.dart';
-import 'package:food_delivery_fbase/pages/admin_page.dart';
-import 'package:food_delivery_fbase/pages/migration_page.dart';
-import 'package:food_delivery_fbase/pages/admin_statistics_page.dart';
+import 'package:food_delivery_fbase/pages/user/settings_page.dart';
+import 'package:food_delivery_fbase/pages/admin/admin_page.dart';
+import 'package:food_delivery_fbase/pages/admin/admin_statistics_page.dart';
 import 'package:food_delivery_fbase/services/auth/auth_service.dart';
 import 'package:food_delivery_fbase/services/auth/login_or_register.dart';
-import 'package:food_delivery_fbase/pages/profile_page.dart';
+import 'package:food_delivery_fbase/pages/user/profile_page.dart';
 import 'package:food_delivery_fbase/components/user_info_widget.dart';
-import 'package:food_delivery_fbase/pages/my_orders_page.dart';
-import 'package:food_delivery_fbase/pages/favorites_page.dart';
+import 'package:food_delivery_fbase/pages/user/my_orders_page.dart';
+import 'package:food_delivery_fbase/pages/user/favorites_page.dart';
 import 'package:food_delivery_fbase/components/cart_badge.dart';
-import 'package:food_delivery_fbase/services/order_service.dart';
-import 'package:food_delivery_fbase/services/favorite_service.dart';
+import 'package:food_delivery_fbase/services/business/order_service.dart';
+import 'package:food_delivery_fbase/services/business/favorite_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -170,18 +169,6 @@ class _MyDrawerState extends State<MyDrawer> {
                           ));
                     },
                   ),
-                  // MyDrawerTile(
-                  //   text: "D I  C H U Y Ể N",
-                  //   icon: Icons.storage,
-                  //   onTap: () {
-                  //     Navigator.pop(context);
-                  //     Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //           builder: (context) => const MigrationPage(),
-                  //         ));
-                  //   },
-                  // ),
                 ],
               ],
             ),

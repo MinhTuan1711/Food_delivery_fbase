@@ -2,9 +2,9 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_fbase/models/cart_item.dart';
 import 'package:food_delivery_fbase/models/food.dart';
-import 'package:food_delivery_fbase/services/food_service.dart';
-import 'package:food_delivery_fbase/services/cart_service.dart';
-import 'package:food_delivery_fbase/services/order_service.dart';
+import 'package:food_delivery_fbase/services/business/food_service.dart';
+import 'package:food_delivery_fbase/services/business/cart_service.dart';
+import 'package:food_delivery_fbase/services/business/order_service.dart';
 import 'package:food_delivery_fbase/models/order.dart' as order_model;
 import 'package:food_delivery_fbase/utils/image_placeholders.dart';
 

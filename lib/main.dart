@@ -4,7 +4,7 @@ import 'package:food_delivery_fbase/services/auth/auth_gate.dart';
 import 'package:food_delivery_fbase/firebase_options.dart';
 import 'package:food_delivery_fbase/models/restaurant.dart';
 import 'package:food_delivery_fbase/themes/theme_provider.dart';
-import 'package:food_delivery_fbase/services/fcm_service.dart';
+import 'package:food_delivery_fbase/services/firebase/fcm_service.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 

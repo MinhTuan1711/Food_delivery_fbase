@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:food_delivery_fbase/pages/cart_page.dart';
-import 'package:food_delivery_fbase/pages/notifications_page.dart';
+import 'package:food_delivery_fbase/pages/user/cart_page.dart';
+import 'package:food_delivery_fbase/pages/user/notifications_page.dart';
 import 'package:food_delivery_fbase/components/user_info_widget.dart';
 import 'package:food_delivery_fbase/components/cart_badge.dart';
-import 'package:food_delivery_fbase/services/notification_service.dart';
+import 'package:food_delivery_fbase/services/business/notification_service.dart';
 
 class MySliverAppBar extends StatelessWidget {
   final Widget child;

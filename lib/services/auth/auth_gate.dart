@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_fbase/pages/home_page.dart';
-import 'package:food_delivery_fbase/pages/location_selection_page.dart';
+import 'package:food_delivery_fbase/pages/user/home_page.dart';
+import 'package:food_delivery_fbase/pages/user/location_selection_page.dart';
 import 'package:food_delivery_fbase/services/auth/login_or_register.dart';
 import 'package:provider/provider.dart';
 import 'package:food_delivery_fbase/models/restaurant.dart';
-import 'package:food_delivery_fbase/services/user_service.dart';
-import 'package:food_delivery_fbase/services/location_check_service.dart';
+import 'package:food_delivery_fbase/services/business/user_service.dart';
+import 'package:food_delivery_fbase/services/location/location_check_service.dart';
 import 'package:food_delivery_fbase/widgets/delivery_range_dialog.dart';
 
 class AuthGate extends StatefulWidget {

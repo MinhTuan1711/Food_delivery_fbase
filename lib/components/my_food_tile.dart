@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_fbase/models/food.dart';
 import 'package:food_delivery_fbase/utils/currency_formatter.dart';
-import 'package:food_delivery_fbase/services/favorite_service.dart';
+import 'package:food_delivery_fbase/services/business/favorite_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FoodTile extends StatelessWidget {
