@@ -1,0 +1,16 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Cho phép user đã đăng nhập upload ảnh vào thư mục food_images
+    match /food_images/{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Rules cho các thư mục khác - chỉ user đã đăng nhập
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+

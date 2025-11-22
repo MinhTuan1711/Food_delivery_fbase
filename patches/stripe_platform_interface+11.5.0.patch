@@ -1,0 +1,18 @@
+--- a/lib/src/models/color.dart
++++ b/lib/src/models/color.dart
+@@ -19,10 +19,10 @@
+ 
+ extension ColorX on Color {
+   String get colorHexString {
+-    final red = (r * 255).toInt().toRadixString(16).padLeft(2, '0');
+-    final green = (g * 255).toInt().toRadixString(16).padLeft(2, '0');
+-    final blue = (b * 255).toInt().toRadixString(16).padLeft(2, '0');
+-    final alpha = (a * 255).toInt().toRadixString(16).padLeft(2, '0');
++    final red = this.red.toRadixString(16).padLeft(2, '0');
++    final green = this.green.toRadixString(16).padLeft(2, '0');
++    final blue = this.blue.toRadixString(16).padLeft(2, '0');
++    final alpha = this.alpha.toRadixString(16).padLeft(2, '0');
+ 
+     return '$alpha$red$green$blue';
+   }
+
