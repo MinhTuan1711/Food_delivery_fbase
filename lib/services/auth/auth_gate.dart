@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:food_delivery_fbase/models/restaurant.dart';
 import 'package:food_delivery_fbase/services/business/user_service.dart';
 import 'package:food_delivery_fbase/services/location/location_check_service.dart';
-import 'package:food_delivery_fbase/widgets/delivery_range_dialog.dart';
+import 'package:food_delivery_fbase/components/my_dialogs.dart';
 
 class AuthGate extends StatefulWidget {
   const AuthGate({super.key});
